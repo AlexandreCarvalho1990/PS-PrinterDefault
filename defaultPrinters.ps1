@@ -1,0 +1,2 @@
+# change "Insert here printer name" to your printer 
+Get-CimInstance -ClassName Win32_Printer | Where-Object -FilterScript {$_.Name -eq "Insert here printer name"} | Invoke-CimMethod -ClassName Win32_Printer -MethodName SetDefaultPrinter
